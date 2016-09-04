@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-velocee" version="0.0.1">
+    <name>VeloceeCDVPlugin</name>
+    <description>Cordova Velocee SDK Plugin</description>
+    <author>Velocee Ltd.</author>author>
+    <license>MIT</license>
+    <keywords>cordova,velocee</keywords>
+    <repo>https://github.com/Velocee/vlc-sdk-cordova.git</repo>
+    <engines>
+        <engine name="cordova" version=">=3.0" />
+    </engines>
+    <js-module src="www/velocee_plugin.js" name="velocee_plugin">
+        <clobbers target="VeloceeCDVPlugin" />
+    </js-module>
+    <!-- IOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="VeloceeCDVPlugin">
+                <param name="ios-package" value="VeloceeCDVPlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/VeloceeCDVPlugin.h" />
+        <source-file src="src/ios/VeloceeCDVPlugin.m" />
+        <!-- SDK Files -->
+        <header-file src="src/ios/libs/VeloceeSDK/Headers/VlcSdk.h" />
+        <resource-file src="src/ios/libs/VeloceeSDK/Library/VlcSdkRes.bundle" />
+        <source-file src="src/ios/libs/VeloceeSDK/Library/libVlcSdk.a" framework="true" compiler-flags="-ObjC" />
+        <!-- Libs -->
+        <header-file src="src/ios/libs/CocoaAsyncSocket/Headers/GCDAsyncSocket.h" />
+        <header-file src="src/ios/libs/CocoaAsyncSocket/Headers/GCDAsyncUdpSocket.h" />
+        <source-file src="src/ios/libs/CocoaAsyncSocket/Library/libCocoaAsyncSocket.a" framework="true" compiler-flags="-ObjC"  />
+        <!-- CocoaLumberjack -->
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDLog.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDFileLogger.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDTTYLogger.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDDispatchQueueLogFormatter.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDLogMacros.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDAbstractDatabaseLogger.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDLog+LOGV.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDLegacyMacros.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDContextFilterLogFormatter.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/CocoaLumberjack.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDASLLogger.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDMultiFormatter.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDAssertMacros.h" />
+        <header-file src="src/ios/libs/CocoaLumberjack/Headers/DDASLLogCapture.h" />
+        <source-file src="src/ios/libs/CocoaLumberjack/Library/libCocoaLumberjack.a" framework="true" compiler-flags="-ObjC"  />
+        <!--
+        <framework src="src/ios/veloceeSdk.framework" custom="true" />
+        -->
+        <framework src="Foundation.framework" />
+        <framework src="UIKit.framework" />
+        <framework src="CoreMedia.framework" />
+        <framework src="CoreGraphics.framework" />
+        <framework src="libsqlite3.0.tbd" />
+        <framework src="WebKit.framework" />
+        <framework src="MediaPlayer.framework" />
+    </platform>
+    <!-- Android -->
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest/application" />
+    </platform>      
+</plugin>

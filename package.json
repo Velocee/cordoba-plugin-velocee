@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-velocee",
+  "cordova_name": "Velocee Cordova Plugin",
+  "version": "0.0.1",
+  "description": "This plugin adds the Velocee SDK",
+  "keywords": [
+    "cordova",
+    "cordova-ios",
+    "ecosystem:cordova"
+  ],
+  "platforms": [
+    "ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Velocee/vlc-sdk-cordova.git"
+  },
+  "maintainers": [
+    {
+      "name": "Velocee",
+      "email": "info@velocee.com"
+    }
+  ],
+  "license": "MIT"
+}
