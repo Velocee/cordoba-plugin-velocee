@@ -60,6 +60,23 @@
     </platform>
     <!-- Android -->
     <platform name="android">
-        <config-file target="AndroidManifest.xml" parent="/manifest/application" />
+        <config-file target="config.xml" parent="/*">
+            <feature name="VeloceeCDVPlugin">
+                <param name="android-package" value="com.velocee.cordova.plugin.VeloceeCDVPlugin"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <preference name="android-minSdkVersion" value="15" />
+            <!--
+            <uses-sdk tools:overrideLibrary="com.velocee.audioplayer" />
+            -->
+        </config-file>
+
+        <!-- src -->
+        <source-file src="src/android/VeloceeCDVPlugin.java" target-dir="src/com/velocee/cordova/plugin" />
+        <!-- libs -->
+        <framework src="src/android/velocee-sdk.gradle" custom="true" type="gradleReference" />
+
     </platform>      
 </plugin>
