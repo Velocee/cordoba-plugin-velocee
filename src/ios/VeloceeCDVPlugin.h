@@ -8,5 +8,6 @@
 //- (void)echo:(CDVInvokedUrlCommand *)command;
 - (void)openAudioPlayer:(CDVInvokedUrlCommand*)command;
 - (void) setFloatingButton:(CDVInvokedUrlCommand*)command;
+- (void) startBackgroundFetch:(CDVInvokedUrlCommand*)command;
 
 @end
