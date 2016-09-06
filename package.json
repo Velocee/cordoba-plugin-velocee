@@ -5,6 +5,7 @@
   "description": "This plugin adds the Velocee SDK",
   "keywords": [
     "cordova",
+    "Velocee",
     "cordova-ios",
     "ecosystem:cordova"
   ],

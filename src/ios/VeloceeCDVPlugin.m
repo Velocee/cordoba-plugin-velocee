@@ -9,6 +9,7 @@
 - (void) pluginInitialize {
     NSLog(@"Velocee plugin initialized");
     [self setupBackgroundFetchHandler];
+    [self setupBackgroundSessionHandler];
 }
 
 - (void)echo:(CDVInvokedUrlCommand *)command {
@@ -98,5 +99,20 @@
     [[VlcSdk getObj] performFetch: (UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler];
 }
 
+- (void)setupBackgroundSessionHandler
+{
+    if ([[[UIApplication sharedApplication] delegate] respondsToSelector:@selector(application:handleEventsForBackgroundURLSession:completionHandler:)]) {
+        NSLog(@"Background Session Method exists do nothing");
+    } else {
+        NSLog(@"Setup background session handler");
+        class_addMethod([[[UIApplication sharedApplication] delegate] class], @selector(application:handleEventsForBackgroundURLSession:completionHandler:),
+                        class_getMethodImplementation([self class],
+                                                      @selector(application:handleEventsForBackgroundURLSession:completionHandler:)), nil);
+    }
+}
+
+- (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler {
+    [[VlcSdk getObj]bgCompleteNotification:completionHandler];
+}
 
 @end
