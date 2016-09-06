@@ -27,3 +27,16 @@ site_url is your website url and is used when sharing items from the player.
 IF you want to setup your own button to activate the player it should call the following method when clicked:
 
 `VeloceeCDVPlugin.openPlayer(source_name, site_url)`
+
+
+Example index.html additions:
+
+    <head>
+    ```document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    function onDeviceReady() {
+        // Now safe to use device APIs
+        VeloceeCDVPlugin.start("sdk_key");
+        VeloceeCDVPlugin.addFloatingButton("Source", "http://your_site.com");
+    }
+    </head>```
