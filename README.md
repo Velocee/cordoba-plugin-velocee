@@ -1,6 +1,6 @@
 #Velocee SDK Plugin for Cordova
 
-This plugin provides and javascript interface to the Velocee SDK.
+This plugin provides and javascript interface to the Velocee SDK. The SDK adds the fetch and audio background modes to the application to allow playback and updates in the background.
 
 #Integration
 
