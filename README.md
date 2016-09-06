@@ -37,9 +37,9 @@ Example index.html additions:
     document.addEventListener("deviceready", onDeviceReady, false);
     // device APIs are available
     function onDeviceReady() {
-    // Now safe to use device APIs
-    VeloceeCDVPlugin.start("sdk_key");
-    VeloceeCDVPlugin.addFloatingButton("Source", "http://your_site.com");
-}
+        // Now safe to use device APIs
+        VeloceeCDVPlugin.start("sdk_key");
+        VeloceeCDVPlugin.addFloatingButton("Source", "http://your_site.com");
+    }
 </head>
 ```
