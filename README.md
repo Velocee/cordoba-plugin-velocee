@@ -31,7 +31,8 @@ IF you want to setup your own button to activate the player it should call the f
 
 Example index.html additions:
 
-```<head>
+```
+<head>
     ...
     document.addEventListener("deviceready", onDeviceReady, false);
     // device APIs are available
