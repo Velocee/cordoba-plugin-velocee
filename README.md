@@ -40,4 +40,5 @@ Example index.html additions:
     VeloceeCDVPlugin.start("sdk_key");
     VeloceeCDVPlugin.addFloatingButton("Source", "http://your_site.com");
 }
-</head>```
+</head>
+```
