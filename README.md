@@ -31,12 +31,13 @@ IF you want to setup your own button to activate the player it should call the f
 
 Example index.html additions:
 
-    <head>
-    ```document.addEventListener("deviceready", onDeviceReady, false);
+```<head>
+    ...
+    document.addEventListener("deviceready", onDeviceReady, false);
     // device APIs are available
     function onDeviceReady() {
-        // Now safe to use device APIs
-        VeloceeCDVPlugin.start("sdk_key");
-        VeloceeCDVPlugin.addFloatingButton("Source", "http://your_site.com");
-    }
-    </head>```
+    // Now safe to use device APIs
+    VeloceeCDVPlugin.start("sdk_key");
+    VeloceeCDVPlugin.addFloatingButton("Source", "http://your_site.com");
+}
+</head>```
