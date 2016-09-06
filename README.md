@@ -34,6 +34,7 @@ Example index.html additions:
 ```
 <head>
     ...
+    <script type="text/javascript" charset="utf-8">
     document.addEventListener("deviceready", onDeviceReady, false);
     // device APIs are available
     function onDeviceReady() {
@@ -41,5 +42,6 @@ Example index.html additions:
         VeloceeCDVPlugin.start("sdk_key");
         VeloceeCDVPlugin.addFloatingButton("Source", "http://your_site.com");
     }
+    </script>
 </head>
 ```
