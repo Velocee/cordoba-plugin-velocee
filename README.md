@@ -1,6 +1,6 @@
 #Velocee SDK Plugin for Cordova
 
-This plugin provides and javascript interface to the Velocee SDK. The SDK adds the fetch and audio background modes to the application to allow playback and updates in the background.
+This plugin provides and javascript interface to the Velocee SDK for IOS and Android. The SDK adds the fetch and audio background modes to the application to allow playback and updates in the background.
 
 #Integration
 
@@ -45,3 +45,25 @@ Example index.html additions:
     </script>
 </head>
 ```
+
+#3rd party libs
+
+This plugin includes the following 3rd party libraries:
+
+CocoaAsyncSocket
+
+https://github.com/robbiehanson/CocoaAsyncSocket
+
+CocoaLumberjack
+
+https://github.com/CocoaLumberjack/CocoaLumberjack
+
+For additional details please see:
+
+Android SDK:
+
+https://github.com/Velocee/vlc-android-sdk2
+
+IOS:
+
+https://github.com/Velocee/vlc-sdk
