@@ -49,6 +49,7 @@ Example index.html additions:
 To update the plugin to the latest version run the following command:
 
 phonegap plugin remove cordova-plugin-velocee
+
 phonegap plugin add https://github.com/Velocee/cordova-plugin-velocee.git
 
 #3rd party libs
