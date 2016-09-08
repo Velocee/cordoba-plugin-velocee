@@ -2,6 +2,7 @@
 android {
     defaultConfig {
         minSdkVersion 15
+        multiDexEnabled true
     }
 
     lintOptions {

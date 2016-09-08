@@ -37,7 +37,7 @@ VeloceePlugin.addFloatingButton = function(source, url, rgbacolor) {
     var cssContent = ".vlc_fab_main_btn{"+
             "background-color:#F44336;"+
             "position:fixed;" +
-            "bottom:2%;" +
+            "bottom:10%;" +
             "left:2%;" +
             "width:60px;"+
             "height:60px;"+

@@ -87,5 +87,6 @@
         <framework src="src/android/velocee-sdk.gradle" custom="true" type="gradleReference" />
         <framework src="com.android.support:appcompat-v7:+" />
         <framework src="com.android.support:design:+" />
+        <framework src="com.android.support:multidex:+" />
     </platform>      
 </plugin>
