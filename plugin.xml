@@ -85,8 +85,9 @@
         <source-file src="src/android/VeloceeCDVPlugin.java" target-dir="src/com/velocee/cordova/plugin" />
         <!-- libs -->
         <framework src="src/android/velocee-sdk.gradle" custom="true" type="gradleReference" />
-        <framework src="com.android.support:appcompat-v7:+" />
-        <framework src="com.android.support:design:+" />
+        <framework src="com.android.support:appcompat-v7:23+" />
+        <framework src="com.android.support:design:23+" />
+        <!-- <framework src="com.android.support:support-v4:+" /> -->
         <!--
         <framework src="com.android.support:multidex:+" />
         -->

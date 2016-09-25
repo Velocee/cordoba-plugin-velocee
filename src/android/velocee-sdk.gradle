@@ -2,18 +2,18 @@
 android {
     defaultConfig {
         minSdkVersion 15
-        multiDexEnabled true
+        //multiDexEnabled true
         //vectorDrawables.useSupportLibrary = true
-        generatedDensities = [] 
+        //generatedDensities = [] 
     }
 
     lintOptions {
         abortOnError false
     }
 
-    aaptOptions {
-        additionalParameters "--no-version-vectors"
-    }
+    //aaptOptions {
+    //    additionalParameters "--no-version-vectors"
+    //}
 
 }
 
