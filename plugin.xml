@@ -88,6 +88,26 @@
         <framework src="com.android.support:appcompat-v7:23+" />
         <framework src="com.android.support:design:23+" />
         <framework src="com.android.support:support-v4:+" />
+        <!-- Multidex -->
         <framework src="com.android.support:multidex:+" />
+        <!--
+        <config-file target="AndroidManifest.xml" parent="/manifest/application" mode="merge">
+            <application
+                android:name="android.support.multidex.MultiDexApplication" >
+            </application>
+        </config-file>
+        -->
+        <!--
+        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+            <application android:name="android.support.multidex.MultiDexApplication" />
+        </edit-config>
+        -->
+        <!-- Hooks -->
+        <hook type="before_compile" src="addMultidexManifest.js" />
+        <hook type="after_platform_add" src="addMultidexManifest.js" />
+        <hook type="after_plugin_add" src="addMultidexManifest.js" />
+        <hook type="before_plugin_rm" src="removeMultidexManifest.js" />
+        <hook type="after_plugin_rm" src="removeMultidexManifest.js" />
+        <!-- -->
     </platform>      
 </plugin>
