@@ -65,6 +65,9 @@
         <framework src="libsqlite3.0.tbd" />
         <framework src="WebKit.framework" />
         <framework src="MediaPlayer.framework" />
+        <framework src="AVFoundation.framework" />
+        <framework src="JavaScriptCore.framework" />
+        <framework src="SystemConfiguration.framework" />
     </platform>
     <!-- Android -->
     <platform name="android">
