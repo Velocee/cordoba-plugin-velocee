@@ -80,8 +80,8 @@ VeloceePlugin.addFloatingButton = function(source, url, rgbacolor) {
 
 createVeloceeAudioImage = function() {
     var x = document.createElement("IMG");
-    //x.src = velocee_speaker_icon;
-    x.src="http://app.velocee.com/pages/icon_volume_up.png";
+    x.src = velocee_speaker_icon;
+    //x.src="http://app.velocee.com/pages/icon_volume_up.png";
     x.width = 40;
     x.height = 40;
     x.style = "text-align:center;margin:auto";
