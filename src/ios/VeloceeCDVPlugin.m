@@ -37,7 +37,7 @@
   NSString* source = [command argumentAtIndex:0 withDefault:@"Source" andClass:[NSString class]];
   NSString* url = [command argumentAtIndex:0 withDefault:@"" andClass:[NSString class]];
   
-  UIViewController *playerVC = [[VlcSdk getObj]getPLayerViewControllerWithSourceName:@"TEST Cordova" andSiteUrl:@"http://www.velocee.com"];
+  UIViewController *playerVC = [[VlcSdk getObj]getPLayerViewControllerWithSourceName:source andSiteUrl:url];
   [self.viewController presentViewController:playerVC animated:NO completion:nil];
 
   if (source != nil && url != nil) {

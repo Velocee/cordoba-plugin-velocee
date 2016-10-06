@@ -29,6 +29,9 @@
                 <string>fetch</string>
             </array>
         </config-file>
+        <config-file target="*-Info.plist" parent="NSMotionUsageDescription">
+            <string>The app uses motion detection to detect your motion status</string>
+        </config-file>
         <header-file src="src/ios/VeloceeCDVPlugin.h" />
         <source-file src="src/ios/VeloceeCDVPlugin.m" />
         <!-- SDK Files -->
